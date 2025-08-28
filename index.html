@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Roadmap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+        }
+        .slide-container {
+            width: 100%;
+            max-width: 1280px;
+            height: 90vh; /* Control slide height */
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            padding: 40px 60px;
+            display: flex;
+            flex-direction: column;
+        }
+        .timeline-wrapper {
+            flex-grow: 1;
+            overflow-y: auto; /* Enable scrolling */
+            padding-right: 20px; /* Space for scrollbar */
+        }
+        /* Custom scrollbar for a cleaner look */
+        .timeline-wrapper::-webkit-scrollbar {
+            width: 8px;
+        }
+        .timeline-wrapper::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        .timeline-wrapper::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .timeline-wrapper::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .timeline-container {
+            position: relative;
+            margin-top: 20px;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 20px;
+            bottom: 20px;
+            width: 4px;
+            background: linear-gradient(to bottom, #a7b2c1, #3b82f6, #a855f7, #f59e0b);
+            border-radius: 2px;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            width: 50%;
+        }
+        .timeline-item-content {
+            transition: all 0.3s ease;
+        }
+        .timeline-item-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        .timeline-item:nth-child(odd) {
+            padding-right: 60px;
+        }
+        .timeline-item:nth-child(even) {
+            align-self: flex-end;
+            padding-left: 60px;
+        }
+        .timeline-dot {
+            position: absolute;
+            top: 24px;
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border: 4px solid;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -12px;
+        }
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -12px;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Slide Title -->
+        <header class="text-center flex-shrink-0">
+            <h1 class="text-5xl font-extrabold text-gray-800 tracking-tight">Our Journey to Launch</h1>
+            <p class="text-xl text-gray-500 mt-2">A Strategic 6-Phase Product Roadmap</p>
+        </header>
+
+        <!-- Timeline Wrapper for Scrolling -->
+        <div class="timeline-wrapper">
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="flex flex-col">
+                    
+                    <!-- Phase 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-gray-400"></div>
+                        <div class="p-4 bg-white rounded-lg shadow-md border border-gray-200 timeline-item-content text-right">
+                            <span class="status-badge bg-gray-200 text-gray-700">✅ Completed</span>
+                            <h3 class="text-lg font-bold text-gray-800 mt-2">Phase 1: Ideation & Research</h3>
+                            <ul class="text-sm text-gray-600 mt-2 space-y-1 list-none">
+                                <li>Defined problem & target audience</li>
+                                <li>Analyzed market & competitors</li>
+                                <li>Validated financial literacy gap</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-blue-500"></div>
+                        <div class="p-4 bg-white rounded-lg shadow-md border border-gray-200 timeline-item-content text-left">
+                            <span class="status-badge bg-blue-100 text-blue-700">⏳ Ongoing</span>
+                            <h3 class="text-lg font-bold text-gray-800 mt-2">Phase 2: Prototype Development</h3>
+                            <ul class="text-sm text-gray-600 mt-2 space-y-1 list-disc list-inside">
+                                <li>Develop landing page & basic UI/UX</li>
+                                <li>Create virtual investment simulation</li>
+                                <li>Build Gen AI interaction layer</li>
+                                <li>Integrate rule-based logic</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-indigo-500"></div>
+                        <div class="p-4 bg-white rounded-lg shadow-md border border-gray-200 timeline-item-content text-right">
+                            <p class="font-semibold text-indigo-600">Next 2-3 Weeks</p>
+                            <h3 class="text-lg font-bold text-gray-800">Phase 3: MVP Finalization</h3>
+                            <ul class="text-sm text-gray-600 mt-2 space-y-1 list-none">
+                                <li>Improve ML-based backend logic</li>
+                                <li>Add educational content modules</li>
+                                <li>Build portfolio dashboard & alerts</li>
+                                <li>Collect initial user feedback</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Phase 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-purple-500"></div>
+                        <div class="p-4 bg-white rounded-lg shadow-md border border-gray-200 timeline-item-content text-left">
+                            <p class="font-semibold text-purple-600">Month 2</p>
+                            <h3 class="text-lg font-bold text-gray-800">Phase 4: Testing & Iteration</h3>
+                            <ul class="text-sm text-gray-600 mt-2 space-y-1 list-disc list-inside">
+                                <li>Pilot test with 100+ Tier 2/3 users</li>
+                                <li>Improve engine based on behavior</li>
+                                <li>Localize language (Hindi + 1 regional)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 5 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-pink-500"></div>
+                        <div class="p-4 bg-white rounded-lg shadow-md border border-gray-200 timeline-item-content text-right">
+                             <p class="font-semibold text-pink-600">Month 3-4</p>
+                            <h3 class="text-lg font-bold text-gray-800">Phase 5: Launch & Expansion</h3>
+                            <ul class="text-sm text-gray-600 mt-2 space-y-1 list-none">
+                                <li>Publicly launch MVP (web/app)</li>
+                                <li>Partner with financial influencers</li>
+                                <li>Add Mutual Funds & SIPs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Phase 6 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-yellow-500"></div>
+                        <div class="p-4 bg-white rounded-lg shadow-md border border-gray-200 timeline-item-content text-left">
+                            <p class="font-semibold text-yellow-600">Post-Launch</p>
+                            <h3 class="text-lg font-bold text-gray-800">Phase 6: Scale & Monetize</h3>
+                            <ul class="text-sm text-gray-600 mt-2 space-y-1 list-disc list-inside">
+                                <li>Introduce premium advisory plan</li>
+                                <li>Launch AI-powered budgeting tool</li>
+                                <li>Explore deep API integrations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
